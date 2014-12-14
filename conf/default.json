@@ -1,0 +1,15 @@
+{
+  "schema": "log.db",
+  "tableName": "NODE_FLICKR_SYNC",
+  "fields": [
+    {"name": "ID", "type":"CHARACTER(36)", "generated": "uuid"},
+    {"name": "INSERTION_TIMESTAMP", "type": "DATETIME", "format": "YYYY-MM-DDTHH:mm:ss.000Z"},
+    {"name": "LEVEL", "type":"CHARACTER(100)"},
+    {"name": "TITLE", "type":"CHARACTER(3000)"},
+    {"name": "DATA", "type":"CHARACTER(3000)"}
+  ],
+  "regex": [
+    "^([0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}Z) - (debug|info|warn|error): (.*) (\\[.*\\]|\\{.*\\})$",
+    "^([0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}Z) - (debug|info|warn|error): (.*)$"
+  ]
+}

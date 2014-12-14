@@ -1,0 +1,16 @@
+{  
+  "winston": {
+    "console": { 
+      "level": "silly",
+      "json": false,
+      "colorize": true,
+      "timestamp": true
+    },
+    "file": {
+      "level": "silly",
+      "timestamp": true,
+      "filename": "./app.log",
+      "json": false
+    }
+  }
+}
